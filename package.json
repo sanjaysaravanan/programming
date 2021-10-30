@@ -2,7 +2,7 @@
   "name": "programming",
   "version": "1.0.0",
   "description": "",
-  "main": "prime-factorization.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest"
   },
