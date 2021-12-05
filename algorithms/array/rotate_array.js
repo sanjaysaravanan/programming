@@ -1,3 +1,4 @@
+// Approach 1
 var arr = [1, 2, 3, 4, 5];
 var n = arr.length;
 var temp = arr[n - 1];
@@ -8,7 +9,7 @@ for (var i = n - 1; i > 0; i--) {
 
 arr[0] = temp;
 
-console.log(arr);
+// console.log(arr);
 
 // Approach 2
 var arr2 = [1, 2, 3, 4, 5];
@@ -22,4 +23,15 @@ while (p !== q) {
   p += 1;
 }
 
-console.log(arr2);
+// console.log(arr2);
+
+// Approach 3
+
+const rotateArray = (arr, k) => {
+  const mod = k % arr.length;
+  return arr.map((e, i) => {
+    return arr[(mod + i) % arr.length];
+  });
+};
+
+console.log(rotateArray([5, 7, 3, 5, 7, 1, 2], 3));

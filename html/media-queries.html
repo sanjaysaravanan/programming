@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #para {
+        background-color: blue;
+      }
+      @media only screen and (min-width: 600px) {
+        #para {
+          background-color: red;
+        }
+      }
+      @media only screen and (min-width: 1000px) {
+        #para {
+          background-color: greenyellow;
+        }
+      }
+      @media only screen and (min-width: 1400px) {
+        #para {
+          background-color: lightblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <input type="number" /> -->
+    <input
+      type="text"
+      id="in1"
+      name="SampleText"
+      onkeypress="return isNumber(event)"
+    />
+    <script>
+      function isNumber(evt) {
+        console.log(evt.keyCode, evt.charCode);
+        var charCode = evt.charCode;
+        if (charCode >= 48 && charCode <= 57) {
+          return true;
+        }
+        alert("Only Numbers...");
+        return false;
+      }
+    </script>
+  </body>
+</html>
