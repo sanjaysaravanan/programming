@@ -1,38 +1,22 @@
-'use strict';
-// Reading the existing input logic
-process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+// Getting input via STDIN
+const readline = require("readline");
 
-let inputString = '';
-let currentLine = 0;
-
-process.stdin.on('data', inputStdin => {
-    inputString += inputStdin;
+const inp = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
 });
 
-process.stdin.on('end', _ => {
-    inputString = inputString.trim().split('\n').map(string => {
-        return string.trim();
-    });
-    
-    main();    
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
 });
 
-function readLine() {
-    return inputString[currentLine++];
-}
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+    console.log("On Close");
+  console.log(userInput);
 
-
-// Your logic for the Exercise
-function main() {
-    const strInput = readLine();
-    var strOuput = "";
-    strInput.split("").map((ch, i) => {
-        
-        if(i < strInput.length - 1 )
-            strOuput += ch + " ";
-        else
-            strOuput += ch;
-    });
-    console.log(strOuput);
-}
+  //end-here
+});
