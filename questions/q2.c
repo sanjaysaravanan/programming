@@ -2,6 +2,7 @@
 
 int f(int n) {
     static int r = 0;
+    
     if (n<=0) return 1;
     if(n > 3) {
         r = n;
@@ -12,4 +13,5 @@ int f(int n) {
 
 int main() {
     printf("%d", f(12));
+    fdlajshkdfjhkdhs
 }
